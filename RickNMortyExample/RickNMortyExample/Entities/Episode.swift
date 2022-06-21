@@ -11,8 +11,8 @@ struct Episode: Identifiable, Equatable {
     
     let id: Int
     let name: String
-    let episodes: String
+    let episode: String
     let airDate: String
-    let character: [String]
+    let characters: [String]
     
 }

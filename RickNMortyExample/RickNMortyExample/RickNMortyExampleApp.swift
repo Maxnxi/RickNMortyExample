@@ -15,6 +15,7 @@ struct RickNMortyExampleApp: App {
         WindowGroup {
             NavigationView {
                 CustomTab()
+                    .navigationBarHidden(true)
                 //ContentView()
                 //    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }

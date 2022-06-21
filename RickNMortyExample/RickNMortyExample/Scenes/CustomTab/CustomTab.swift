@@ -16,19 +16,20 @@ struct CustomTab: View {
         VStack{
             switch selected {
             case 0:
-                CharactersCollection(columnsNumber: .constant(100))
+                CharactersCollectionView(viewModel: CharactersCollectionViewModel())
             case 1:
                 Locations()
             case 2:
                 Episodes()
             case 3:
-                Text("case 3")
+                CharactersCollectionViewASC(viewModel: CharactersCollectionViewModel())
+                
                 //CharactersCollection()
             case 4:
                 Text("case 4")
                 //CharactersCollection()
             default:
-                CharactersCollection(columnsNumber: .constant(100))
+                CharactersCollectionView(viewModel: CharactersCollectionViewModel())
                 //CharactersCollection()
             }
             
@@ -79,12 +80,8 @@ struct CustomTab: View {
                 .padding()
                 .padding(.horizontal, 12)
                 .background(CurvedTabBack())
-                //.safeAreaInset(edge: VerticalEdge.top, spacing: 0) {
-                    //
-                //}
                 
                 Button {
-                    //
                     scaleKoef == 1 ? (scaleKoef = 0.5) : (scaleKoef = 1)
                 } label: {
                     Image(systemName: "heart.fill")
@@ -94,12 +91,8 @@ struct CustomTab: View {
                 .background(Color.yellow)
                 .clipShape(Circle())
                 .scaleEffect(scaleKoef)
-                .offset(y: -32)
+                .offset(y: -22)
                 .shadow(radius: 5)
-                //.safeAreaInset(edge: VerticalEdge.top, spacing: 20) {
-                    //
-                //}
-                
             }
         }.background(Color.green.edgesIgnoringSafeArea(.top))
     }
