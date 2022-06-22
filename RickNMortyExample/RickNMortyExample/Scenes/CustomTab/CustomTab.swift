@@ -34,17 +34,17 @@ struct CustomTab: View {
             }
             
             
-            Spacer(minLength: 30)
+            Spacer(minLength: 0)
             
             ZStack{
-                HStack{
+                HStack(spacing: 4){
                     Button {
                         self.selected = 0
                     } label: {
                         VStack{
-                            Image(systemName: "person")
-                            Text("Characters")
-                                .font(.custom("Avenir", size: 12))
+                            Image(systemName: Constants.characterTabBarImageName)
+                            Text(Constants.characterTabBarName)
+                                .font(.custom(Constants.fontAvenir, size: 12))
                         }
                     }.foregroundColor(self.selected == 0 ? .black : .gray)
                     
@@ -54,18 +54,22 @@ struct CustomTab: View {
                         self.selected = 1
                     } label: {
                         VStack{
-                            Image(systemName: "map")
-                            Text("Locations")
-                                .font(.custom("Avenir", size: 12 ))
+                            Image(systemName: Constants.locationsTabBarImageName)
+                            Text(Constants.locationsTabBarName)
+                                .font(.custom(Constants.fontAvenir, size: 12 ))
                         }
                     }.foregroundColor(self.selected == 1 ? .black : .gray)
                     
-                    Spacer().frame(width: 120)
+                    Spacer().frame(width: 80)
                     
                     Button {
                         self.selected = 2
                     } label: {
-                        Image(systemName: "house")
+                        VStack {
+                            Image(systemName: Constants.episodesTabBarImageName)
+                            Text(Constants.episodesTabBarName)
+                                .font(.custom(Constants.fontAvenir, size: 12))
+                        }
                     }.foregroundColor(self.selected == 2 ? .black : .gray)
                     
                     Spacer(minLength: 12)
@@ -73,7 +77,11 @@ struct CustomTab: View {
                     Button {
                         self.selected = 3
                     } label: {
-                        Image(systemName: "house")
+                        VStack{
+                            Image(systemName: "house")
+                            Text("Settings")
+                                .font(.custom(Constants.fontAvenir, size: 12))
+                        }
                     }.foregroundColor(self.selected == 3 ? .black : .gray)
                     
                 }
@@ -84,6 +92,7 @@ struct CustomTab: View {
                 Button {
                     scaleKoef == 1 ? (scaleKoef = 0.5) : (scaleKoef = 1)
                 } label: {
+                    
                     Image(systemName: "heart.fill")
                         .renderingMode(.original)
                         .padding(18)
@@ -94,7 +103,8 @@ struct CustomTab: View {
                 .offset(y: -22)
                 .shadow(radius: 5)
             }
-        }.background(Color.green.edgesIgnoringSafeArea(.top))
+        }.background(Color.black.edgesIgnoringSafeArea(.top))
+            //.preferredColorScheme(.dark)
     }
 }
 

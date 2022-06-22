@@ -10,7 +10,6 @@ import SwiftUI
 struct CharactersCollectionView: View {
         
     @StateObject var viewModel: CharactersCollectionViewModel
-    //@State var cellsNumber: Int = viewModel.characters.count
     
     let columns = [
         GridItem(.flexible()),
@@ -19,14 +18,12 @@ struct CharactersCollectionView: View {
     ]
     
     var body: some View {
-        NavigationView{
-            ScrollView {
-                
-                
+        GeometryReader{_ in
+            NavigationView{
+                ScrollView {
                 LazyVGrid(columns: columns) {
                     Section {
                         ForEach(viewModel.characters) { character in
-                            
                             NavigationLink(destination: CharacterDetailView(character: character)) {
                                 CharacterCell(character: character)
                             }
@@ -38,15 +35,14 @@ struct CharactersCollectionView: View {
                         }
                         .padding(10)
                     }
-                    
                 }
+                
                 .onAppear() {
                     if viewModel.characters.isEmpty {
                         viewModel.getAllCharacters(page: 1) // 1
                     }
                 }
-            }
-           
+                }
             .navigationTitle("Characters - \(viewModel.characters.count)")
             .toolbar {
                 HStack{
@@ -63,7 +59,7 @@ struct CharactersCollectionView: View {
                 }
             }
         }
-        //.preferredColorScheme(.dark)
+        }
     }
 }
 
