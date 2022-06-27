@@ -15,7 +15,7 @@ struct CharacterCell: View {
     var body: some View {
         ZStack {
             NavigationLink {
-            CharacterDetailView(character: character)
+                CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))
         } label: {
             ZStack {
                 VStack{

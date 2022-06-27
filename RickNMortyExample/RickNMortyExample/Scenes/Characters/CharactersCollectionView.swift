@@ -24,7 +24,7 @@ struct CharactersCollectionView: View {
                 LazyVGrid(columns: columns) {
                     Section {
                         ForEach(viewModel.characters) { character in
-                            NavigationLink(destination: CharacterDetailView(character: character)) {
+                            NavigationLink(destination: CharacterDetailView(viewModel: CharacterDetailViewModel(character: character))) {
                                 CharacterCell(character: character)
                             }
                             .onAppear() {

@@ -15,7 +15,7 @@ struct ServerGetLocationResponse: Codable {
     let residents: [String]
     let dimension: String
     
-    func converToEntity() -> Location {
+    func convertToEntity() -> Location {
         
         return Location(id: id,
                         name: name.capitalizingFirstLetter(),

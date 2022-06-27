@@ -20,15 +20,24 @@ class LocationRepoImpl: LocationRepository {
         return remoteDataSource.getLocation(page: page).map {
             serverLocation -> [Location] in
             var locations: [Location] = []
-            for location in serverLocation.results {
-                //stopped here
+            for servLocation in serverLocation.results {
+                let location = servLocation.convertToEntity()
+                locations.append(location)
             }
+            return locations
         }
+        .mapError({$0})
+        .eraseToAnyPublisher()
     }
     
     func getLocationDetail(id: Int) -> AnyPublisher<Location, Error> {
-        <#code#>
+        return remoteDataSource.getLocationDetail(id: id).map {
+            serverLocation -> Location in
+            let location = serverLocation.results.convertToEntity()
+            return location
+        }
+        .mapError({$0})
+        .eraseToAnyPublisher()
     }
-    
     
 }

@@ -1,14 +1,14 @@
 //
-//  GetLocationsUseCase.swift
+//  GetLocationDetailUseCase.swift
 //  RickNMortyExample
 //
-//  Created by Maksim Ponomarev on 22/06/2022.
+//  Created by Maksim Ponomarev on 27/06/2022.
 //
 
 import Foundation
 import Combine
 
-class GetLocationsUseCase {
+class GetLocationDetailUseCase {
     
     private let repository: LocationRepository
     
@@ -16,7 +16,7 @@ class GetLocationsUseCase {
         self.repository = repository
     }
     
-    func execute(page: Int) -> AnyPublisher<[Location],Error> {
-        repository.getLocation(page: page)
+    func execute(id: Int) -> AnyPublisher<Location, Error> {
+        repository.getLocationDetail(id: id)
     }
 }

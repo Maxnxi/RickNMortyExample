@@ -18,7 +18,7 @@ struct CustomTab: View {
             case 0:
                 CharactersCollectionView(viewModel: CharactersCollectionViewModel())
             case 1:
-                Locations()
+                LocationsView(viewModel: LocationsViewModel())
             case 2:
                 Episodes()
             case 3:

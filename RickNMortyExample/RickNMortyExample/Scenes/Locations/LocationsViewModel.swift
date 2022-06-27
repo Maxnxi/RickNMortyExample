@@ -9,11 +9,8 @@ import Foundation
 import SwiftUI
 import Combine
 
-protocol LocationsViewModel {
-    func getLocations(page: Int)
-}
 
-class LocationsViewModelImpl:LocationsViewModel, ObservableObject {
+class LocationsViewModel: ObservableObject {
 
     @Published public private(set) var locations: [ Location ] = []
     @Published public private(set) var showProgressView = false
@@ -23,8 +20,19 @@ class LocationsViewModelImpl:LocationsViewModel, ObservableObject {
     
     func getLocations(page: Int) {
         showProgressView = true
-        cancellable = Get
+        cancellable = GetLocationsUseCase().execute(page: page)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                self.showProgressView = false
+                switch completion {
+                case .finished:
+                    self.currentPage += 1
+                    break
+                case .failure:
+                    break
+                }
+            }, receiveValue: { locations in
+                self.locations.append(contentsOf: locations)
+            })
     }
-    
-    
 }

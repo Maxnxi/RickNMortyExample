@@ -33,6 +33,14 @@
 		05673782285B8343006B6CBD /* Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05673781285B8343006B6CBD /* Episodes.swift */; };
 		05673784285B834E006B6CBD /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05673783285B834E006B6CBD /* LocationsView.swift */; };
 		05673788285B9C1C006B6CBD /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05673787285B9C1C006B6CBD /* CharacterCell.swift */; };
+		05AA10FF2869CEF200AEC3C1 /* GetLocationDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA10FE2869CEF200AEC3C1 /* GetLocationDetailUseCase.swift */; };
+		05AA11022869D10D00AEC3C1 /* ListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA11012869D10D00AEC3C1 /* ListHeader.swift */; };
+		05AA11052869D22A00AEC3C1 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA11042869D22A00AEC3C1 /* LocationDetailView.swift */; };
+		05AA11072869D44700AEC3C1 /* LocationsListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA11062869D44700AEC3C1 /* LocationsListCellView.swift */; };
+		05AA110C2869E2B600AEC3C1 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA110B2869E2B600AEC3C1 /* LocationDetailViewModel.swift */; };
+		05AA110F2869E4B000AEC3C1 /* LocationDetSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA110E2869E4B000AEC3C1 /* LocationDetSubView.swift */; };
+		05AA11122869EEBC00AEC3C1 /* CharDetailItemSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA11112869EEBC00AEC3C1 /* CharDetailItemSubView.swift */; };
+		05AA11152869F25100AEC3C1 /* OtherCharacterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA11142869F25100AEC3C1 /* OtherCharacterCellView.swift */; };
 		05C94ED328606ABD00DC5167 /* CharacterRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C94ED228606ABD00DC5167 /* CharacterRepo.swift */; };
 		05C94ED528606B7700DC5167 /* CharacterRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C94ED428606B7700DC5167 /* CharacterRepoImpl.swift */; };
 		05C94ED728606BE200DC5167 /* CharacterRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C94ED628606BE200DC5167 /* CharacterRemoteDataSource.swift */; };
@@ -111,6 +119,14 @@
 		05673781285B8343006B6CBD /* Episodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episodes.swift; sourceTree = "<group>"; };
 		05673783285B834E006B6CBD /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		05673787285B9C1C006B6CBD /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		05AA10FE2869CEF200AEC3C1 /* GetLocationDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationDetailUseCase.swift; sourceTree = "<group>"; };
+		05AA11012869D10D00AEC3C1 /* ListHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeader.swift; sourceTree = "<group>"; };
+		05AA11042869D22A00AEC3C1 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		05AA11062869D44700AEC3C1 /* LocationsListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListCellView.swift; sourceTree = "<group>"; };
+		05AA110B2869E2B600AEC3C1 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
+		05AA110E2869E4B000AEC3C1 /* LocationDetSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetSubView.swift; sourceTree = "<group>"; };
+		05AA11112869EEBC00AEC3C1 /* CharDetailItemSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharDetailItemSubView.swift; sourceTree = "<group>"; };
+		05AA11142869F25100AEC3C1 /* OtherCharacterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherCharacterCellView.swift; sourceTree = "<group>"; };
 		05C94ED228606ABD00DC5167 /* CharacterRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepo.swift; sourceTree = "<group>"; };
 		05C94ED428606B7700DC5167 /* CharacterRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRepoImpl.swift; sourceTree = "<group>"; };
 		05C94ED628606BE200DC5167 /* CharacterRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRemoteDataSource.swift; sourceTree = "<group>"; };
@@ -171,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				05068F7C28631F3C00CB74F8 /* GetLocationsUseCase.swift */,
+				05AA10FE2869CEF200AEC3C1 /* GetLocationDetailUseCase.swift */,
 			);
 			path = LocationUseCase;
 			sourceTree = "<group>";
@@ -262,6 +279,7 @@
 		05673761285B562B006B6CBD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				05AA11002869D10000AEC3C1 /* ListHeader */,
 				05C94F032860838100DC5167 /* ProgressView */,
 				05C94EFE286082BC00DC5167 /* CollectionHeaderView */,
 				05673762285B5638006B6CBD /* LaunchScreen */,
@@ -344,6 +362,7 @@
 		0567377C285B8275006B6CBD /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				05AA11102869EE9B00AEC3C1 /* addonsView */,
 				05C94EEF28607A0500DC5167 /* CharacterDetail */,
 				0567377D285B828A006B6CBD /* CharactersCollectionView.swift */,
 				05C94EF428607DFC00DC5167 /* CharactersCollectionViewModel.swift */,
@@ -356,6 +375,9 @@
 		0567377F285B832A006B6CBD /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				05AA11132869F24700AEC3C1 /* subView */,
+				05AA11032869D20B00AEC3C1 /* LocationDetail */,
+				05AA11082869D48900AEC3C1 /* CellView */,
 				05673783285B834E006B6CBD /* LocationsView.swift */,
 				05068F79286317CE00CB74F8 /* LocationsViewModel.swift */,
 			);
@@ -368,6 +390,63 @@
 				05673781285B8343006B6CBD /* Episodes.swift */,
 			);
 			path = Episodes;
+			sourceTree = "<group>";
+		};
+		05AA10FD2869CE6F00AEC3C1 /* EpisodesUseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EpisodesUseCase;
+			sourceTree = "<group>";
+		};
+		05AA11002869D10000AEC3C1 /* ListHeader */ = {
+			isa = PBXGroup;
+			children = (
+				05AA11012869D10D00AEC3C1 /* ListHeader.swift */,
+			);
+			path = ListHeader;
+			sourceTree = "<group>";
+		};
+		05AA11032869D20B00AEC3C1 /* LocationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				05AA110D2869E49D00AEC3C1 /* subView */,
+				05AA11042869D22A00AEC3C1 /* LocationDetailView.swift */,
+				05AA110B2869E2B600AEC3C1 /* LocationDetailViewModel.swift */,
+			);
+			path = LocationDetail;
+			sourceTree = "<group>";
+		};
+		05AA11082869D48900AEC3C1 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				05AA11062869D44700AEC3C1 /* LocationsListCellView.swift */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
+		05AA110D2869E49D00AEC3C1 /* subView */ = {
+			isa = PBXGroup;
+			children = (
+				05AA110E2869E4B000AEC3C1 /* LocationDetSubView.swift */,
+			);
+			path = subView;
+			sourceTree = "<group>";
+		};
+		05AA11102869EE9B00AEC3C1 /* addonsView */ = {
+			isa = PBXGroup;
+			children = (
+				05AA11112869EEBC00AEC3C1 /* CharDetailItemSubView.swift */,
+			);
+			path = addonsView;
+			sourceTree = "<group>";
+		};
+		05AA11132869F24700AEC3C1 /* subView */ = {
+			isa = PBXGroup;
+			children = (
+				05AA11142869F25100AEC3C1 /* OtherCharacterCellView.swift */,
+			);
+			path = subView;
 			sourceTree = "<group>";
 		};
 		05C94ED028606A9D00DC5167 /* Character */ = {
@@ -426,6 +505,7 @@
 		05C94EF628607F7800DC5167 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				05AA10FD2869CE6F00AEC3C1 /* EpisodesUseCase */,
 				05068F7B28631F1900CB74F8 /* LocationUseCase */,
 				05C94EFD2860817C00DC5167 /* CharcterUseCase */,
 			);
@@ -615,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05AA10FF2869CEF200AEC3C1 /* GetLocationDetailUseCase.swift in Sources */,
 				0567373D285B5587006B6CBD /* RickNMortyExample.xcdatamodeld in Sources */,
 				05C94EDA28606DC400DC5167 /* Constants.swift in Sources */,
 				05C94EDF2860702400DC5167 /* ServerResultResponse.swift in Sources */,
@@ -638,11 +719,17 @@
 				05673782285B8343006B6CBD /* Episodes.swift in Sources */,
 				05673733285B5584006B6CBD /* ContentView.swift in Sources */,
 				0567377B285B7544006B6CBD /* Location.swift in Sources */,
+				05AA11152869F25100AEC3C1 /* OtherCharacterCellView.swift in Sources */,
+				05AA110C2869E2B600AEC3C1 /* LocationDetailViewModel.swift in Sources */,
 				05068F7F2863351A00CB74F8 /* LocationRemoteDataSource.swift in Sources */,
 				05673777285B752F006B6CBD /* Episode.swift in Sources */,
+				05AA11052869D22A00AEC3C1 /* LocationDetailView.swift in Sources */,
+				05AA110F2869E4B000AEC3C1 /* LocationDetSubView.swift in Sources */,
 				05068F8128633C6900CB74F8 /* LocationRepository.swift in Sources */,
 				05068F7D28631F3C00CB74F8 /* GetLocationsUseCase.swift in Sources */,
 				05C94EEE286071B400DC5167 /* String_Extension.swift in Sources */,
+				05AA11072869D44700AEC3C1 /* LocationsListCellView.swift in Sources */,
+				05AA11022869D10D00AEC3C1 /* ListHeader.swift in Sources */,
 				05C94F082860846200DC5167 /* Image_Extension.swift in Sources */,
 				05C94EE72860713D00DC5167 /* ServerEpisodeResponse.swift in Sources */,
 				05C94EDD28606FC500DC5167 /* ServerBaseArrayResponse.swift in Sources */,
@@ -652,6 +739,7 @@
 				0567376E285B6E7E006B6CBD /* Tabs.swift in Sources */,
 				05E8E8C12862056E00CFC3FA /* CharactersCollectionViewASC.swift in Sources */,
 				05C94ED728606BE200DC5167 /* CharacterRemoteDataSource.swift in Sources */,
+				05AA11122869EEBC00AEC3C1 /* CharDetailItemSubView.swift in Sources */,
 				05C94ED528606B7700DC5167 /* CharacterRepoImpl.swift in Sources */,
 				05673731285B5584006B6CBD /* RickNMortyExampleApp.swift in Sources */,
 				05673767285B5B0F006B6CBD /* CurvedTabBack.swift in Sources */,
