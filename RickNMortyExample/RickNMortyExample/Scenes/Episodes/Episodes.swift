@@ -8,14 +8,40 @@
 import SwiftUI
 
 struct Episodes: View {
+    
+    @StateObject var viewModel: EpisodesViewModel
+    
     var body: some View {
-        Text("Episodes!")
-            .font(.title)
+        VStack {
+            List {
+                Section(header: ListHeaderView()) {
+                    if viewModel.showProgressView {
+                        ProgressviewView()
+                    }
+                    ForEach(viewModel.episodes) {
+                        episode in
+                        NavigationLink(destination: EpisodeDetailView()) {
+                            EpisodeListCellview(viewModel: episode)
+                        }
+                        .onAppear {
+                            if episode == viewModel.episodes.last {
+                                viewModel.getEpisodes(page: viewModel.currentPage)
+                            }
+                        }
+                    }
+                }
+                .onAppear {
+                    if viewModel.episodes.isEmpty {
+                        viewModel.getEpisodes(page: 1)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct Episodes_Previews: PreviewProvider {
     static var previews: some View {
-        Episodes()
+        Episodes(viewModel: EpisodesViewModel())
     }
 }
