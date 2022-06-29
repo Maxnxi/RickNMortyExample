@@ -20,14 +20,15 @@ struct CustomTab: View {
             case 1:
                 LocationsView(viewModel: LocationsViewModel())
             case 2:
-                Episodes()
+                Episodes(viewModel: EpisodesViewModel())
             case 3:
                 CharactersCollectionViewASC(viewModel: CharactersCollectionViewModel())
                 
                 //CharactersCollection()
             case 4:
-                Text("case 4")
+                //Text("case 4")
                 //CharactersCollection()
+                ARScene()
             default:
                 CharactersCollectionView(viewModel: CharactersCollectionViewModel())
                 //CharactersCollection()
@@ -91,6 +92,7 @@ struct CustomTab: View {
                 
                 Button {
                     scaleKoef == 1 ? (scaleKoef = 0.5) : (scaleKoef = 1)
+                    self.selected = 4
                 } label: {
                     
                     Image(systemName: "heart.fill")

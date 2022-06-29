@@ -11,7 +11,7 @@ import Combine
 class GetEpisodeDetailUseCase {
     private let repository: EpisodesRepo
     
-    init(repository: EpisodesRepo = EpisodesRepo) {
+    init(repository: EpisodesRepo = EpisodesRepoImpl()) {
         self.repository = repository
     }
     

@@ -78,6 +78,8 @@
 		05E8E8BF286204E700CFC3FA /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 05E8E8BE286204E700CFC3FA /* ASCollectionView */; };
 		05E8E8C12862056E00CFC3FA /* CharactersCollectionViewASC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E8E8C02862056E00CFC3FA /* CharactersCollectionViewASC.swift */; };
 		05E8E8C4286209E100CFC3FA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 05E8E8C3286209E100CFC3FA /* Kingfisher */; };
+		05E9247E286C935C00A39C60 /* ARDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E9247D286C935C00A39C60 /* ARDelegate.swift */; };
+		05E92481286C93EA00A39C60 /* GeometryUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E92480286C93EA00A39C60 /* GeometryUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		05E8E8B92861E8CB00CFC3FA /* CharRemoteDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharRemoteDataSourceTest.swift; sourceTree = "<group>"; };
 		05E8E8BB2861F02800CFC3FA /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		05E8E8C02862056E00CFC3FA /* CharactersCollectionViewASC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewASC.swift; sourceTree = "<group>"; };
+		05E9247D286C935C00A39C60 /* ARDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDelegate.swift; sourceTree = "<group>"; };
+		05E92480286C93EA00A39C60 /* GeometryUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +421,7 @@
 		05A31F66286AE8050069B2FC /* ARScene */ = {
 			isa = PBXGroup;
 			children = (
+				05E9247F286C93D500A39C60 /* addons */,
 				05A31F67286AE82C0069B2FC /* ARScene.swift */,
 			);
 			path = ARScene;
@@ -605,6 +610,15 @@
 			path = CharacterTest;
 			sourceTree = "<group>";
 		};
+		05E9247F286C93D500A39C60 /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				05E9247D286C935C00A39C60 /* ARDelegate.swift */,
+				05E92480286C93EA00A39C60 /* GeometryUtils.swift */,
+			);
+			path = addons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -752,11 +766,13 @@
 				0567373A285B5587006B6CBD /* Persistence.swift in Sources */,
 				05673765285B56D9006B6CBD /* CustomTab.swift in Sources */,
 				05C94EF128607A2400DC5167 /* CharacterDetailViewModel.swift in Sources */,
+				05E9247E286C935C00A39C60 /* ARDelegate.swift in Sources */,
 				05AEF606286B2EA100CDF6D1 /* GetEpisodesUseCase.swift in Sources */,
 				05C94EE12860705200DC5167 /* ServerCharacterResponse.swift in Sources */,
 				05C94EFC2860817900DC5167 /* GetAllCharactersByIdUseCase.swift in Sources */,
 				05673788285B9C1C006B6CBD /* CharacterCell.swift in Sources */,
 				05C94EE32860712200DC5167 /* ServerOriginResponse.swift in Sources */,
+				05E92481286C93EA00A39C60 /* GeometryUtils.swift in Sources */,
 				05068F8328633C8700CB74F8 /* LocationRepoImpl.swift in Sources */,
 				0567377E285B828A006B6CBD /* CharactersCollectionView.swift in Sources */,
 				05673779285B753C006B6CBD /* Character.swift in Sources */,

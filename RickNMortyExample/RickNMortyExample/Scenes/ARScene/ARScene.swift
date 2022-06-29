@@ -10,27 +10,35 @@ import ARKit
 import SceneKit
 
 struct ARViewContainer: UIViewRepresentable {
-    typealias UIViewType = ARView
-    
-    //typealias UIViewType = ARView
-    func makeUIView(context: UIViewRepresentableContext<ARViewContainer>) -> ARView {
-        let arView = ARView(frame: .zero, cameraMode: .ar, automaticallyConfigureSession: true)
-        let boxAnchor = try! Experience.loadBox()
-        arView.scene.anchors.append(boxAnchor)
+    let arDelegate: ARDelegate
+
+    func makeUIView(context: Context) -> some UIView {
+        let arView = ARSCNView(frame: .zero)
+        arDelegate.setARView(arView)
         return arView
     }
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) { }
 }
 
 struct ARScene: View {
+    
+    @ObservedObject var arDelegate = ARDelegate()
+    
     var body: some View {
         GeometryReader {_ in
-            VStack {
-                //Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                
-                     ARViewContainer().edgesIgnoringSafeArea(.all)
-                
-            }//VStack
+            ZStack {
+             ARViewContainer(arDelegate: arDelegate)
+                VStack {
+                    Spacer()
+                    Text(arDelegate.message)
+                        .foregroundColor(Color.primary)
+                        .frame(maxWidth: .infinity)
+                        .padding(.bottom, 20)
+                        .background(Color.secondary)
+                }
+            }
+            .edgesIgnoringSafeArea(.all)
         } // GeometryReader
         
     }
