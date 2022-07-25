@@ -35,10 +35,11 @@ class ApiManager {
                 guard (200..<300).contains(statusCode) else {
                     throw HTTPError.invalidStatusCode
                 }
-                
+                print("data info ", data)
                 return data
             }
             .decode(type: T.self, decoder: decoder)
+            .print()
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }

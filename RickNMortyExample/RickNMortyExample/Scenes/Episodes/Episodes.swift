@@ -20,8 +20,11 @@ struct Episodes: View {
                     }
                     ForEach(viewModel.episodes) {
                         episode in
-                        NavigationLink(destination: EpisodeDetailView()) {
-                            EpisodeListCellview(viewModel: episode)
+                        NavigationLink(destination: EpisodeDetailView(viewModel: EpisodeDetailViewModel(episode: episode))) {
+                            ZStack{
+                                EpisodeListCellview(viewModel: episode)
+                            }
+                            
                         }
                         .onAppear {
                             if episode == viewModel.episodes.last {
