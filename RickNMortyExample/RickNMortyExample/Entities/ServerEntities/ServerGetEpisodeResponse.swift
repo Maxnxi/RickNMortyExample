@@ -15,6 +15,12 @@ struct ServerGetEpisodeResponse: Codable {
     let airDate: String
     let characters: [String]
     
+    enum CodingKeys: String, CodingKey {
+            case id, name
+            case airDate = "air_date"
+            case episode, characters
+        }
+    
     func convertToEntity() -> Episode {
         
         return Episode(id: id,

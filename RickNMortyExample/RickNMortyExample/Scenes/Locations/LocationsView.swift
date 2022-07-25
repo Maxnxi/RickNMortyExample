@@ -16,10 +16,11 @@ struct LocationsView: View {
             List {
                 Section(header: ListHeaderView()) {
                     if viewModel.showProgressView {
-                        ProgressView()
+                        ProgressviewView()
                     }
                     ForEach(viewModel.locations) { location in
                         NavigationLink(destination: LocationDetailView(viewModel: LocationDetailViewModel(location: location))) {
+                            
                             ZStack {
                                 LocationsListCellView(viewModel: location)
                             }

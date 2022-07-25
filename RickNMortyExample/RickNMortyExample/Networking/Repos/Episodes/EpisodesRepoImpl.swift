@@ -19,8 +19,8 @@ class EpisodesRepoImpl: EpisodesRepo {
         return remoteDataSource.getEpisodes(page: page).map {
             serverEpisode -> [Episode] in
             var episodes: [Episode] = []
-            for serverEpisod in serverEpisode.results {
-                let episode = serverEpisod.convertToEntity()
+            for servEpisode in serverEpisode.results {
+                let episode = servEpisode.convertToEntity()
                 episodes.append(episode)
             }
             return episodes

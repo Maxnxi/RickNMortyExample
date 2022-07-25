@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050673F7288E810000E3761B /* MockEpisodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050673F6288E810000E3761B /* MockEpisodeRepository.swift */; };
+		050673F9288E826100E3761B /* EpisodesRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050673F8288E826100E3761B /* EpisodesRepositoryImplementationUnitTest.swift */; };
+		050673FB288E901500E3761B /* EpisodeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050673FA288E901500E3761B /* EpisodeDetailViewModel.swift */; };
+		050673FD288E96B900E3761B /* EpisodeRemoteDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050673FC288E96B900E3761B /* EpisodeRemoteDataSourceUnitTest.swift */; };
+		05067400288E985000E3761B /* MockLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050673FF288E985000E3761B /* MockLocationRepository.swift */; };
+		05067402288E98B000E3761B /* LocationRemoteDataSourceUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05067401288E98B000E3761B /* LocationRemoteDataSourceUnitTest.swift */; };
+		05067404288E98D900E3761B /* LocationRepositoryImplementationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05067403288E98D900E3761B /* LocationRepositoryImplementationUnitTest.swift */; };
 		05068F7A286317CE00CB74F8 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05068F79286317CE00CB74F8 /* LocationsViewModel.swift */; };
 		05068F7D28631F3C00CB74F8 /* GetLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05068F7C28631F3C00CB74F8 /* GetLocationsUseCase.swift */; };
 		05068F7F2863351A00CB74F8 /* LocationRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05068F7E2863351A00CB74F8 /* LocationRemoteDataSource.swift */; };
@@ -100,6 +107,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		050673F6288E810000E3761B /* MockEpisodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEpisodeRepository.swift; sourceTree = "<group>"; };
+		050673F8288E826100E3761B /* EpisodesRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
+		050673FA288E901500E3761B /* EpisodeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewModel.swift; sourceTree = "<group>"; };
+		050673FC288E96B900E3761B /* EpisodeRemoteDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRemoteDataSourceUnitTest.swift; sourceTree = "<group>"; };
+		050673FF288E985000E3761B /* MockLocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationRepository.swift; sourceTree = "<group>"; };
+		05067401288E98B000E3761B /* LocationRemoteDataSourceUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRemoteDataSourceUnitTest.swift; sourceTree = "<group>"; };
+		05067403288E98D900E3761B /* LocationRepositoryImplementationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryImplementationUnitTest.swift; sourceTree = "<group>"; };
 		05068F79286317CE00CB74F8 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		05068F7C28631F3C00CB74F8 /* GetLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocationsUseCase.swift; sourceTree = "<group>"; };
 		05068F7E2863351A00CB74F8 /* LocationRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRemoteDataSource.swift; sourceTree = "<group>"; };
@@ -203,6 +217,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050673F5288E80C900E3761B /* EpisodesTest */ = {
+			isa = PBXGroup;
+			children = (
+				050673F6288E810000E3761B /* MockEpisodeRepository.swift */,
+				050673F8288E826100E3761B /* EpisodesRepositoryImplementationUnitTest.swift */,
+				050673FC288E96B900E3761B /* EpisodeRemoteDataSourceUnitTest.swift */,
+			);
+			path = EpisodesTest;
+			sourceTree = "<group>";
+		};
+		050673FE288E983000E3761B /* LocationTest */ = {
+			isa = PBXGroup;
+			children = (
+				050673FF288E985000E3761B /* MockLocationRepository.swift */,
+				05067401288E98B000E3761B /* LocationRemoteDataSourceUnitTest.swift */,
+				05067403288E98D900E3761B /* LocationRepositoryImplementationUnitTest.swift */,
+			);
+			path = LocationTest;
+			sourceTree = "<group>";
+		};
 		05068F7B28631F1900CB74F8 /* LocationUseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				05AEF610286B387200CDF6D1 /* EpisodeDetailView.swift */,
+				050673FA288E901500E3761B /* EpisodeDetailViewModel.swift */,
 			);
 			path = EpisodeDetailView;
 			sourceTree = "<group>";
@@ -594,6 +629,8 @@
 		05E8E8B32861E85900CFC3FA /* RepoTest */ = {
 			isa = PBXGroup;
 			children = (
+				050673FE288E983000E3761B /* LocationTest */,
+				050673F5288E80C900E3761B /* EpisodesTest */,
 				05E8E8B42861E86800CFC3FA /* CharacterTest */,
 				05E8E8BB2861F02800CFC3FA /* URLProtocolMock.swift */,
 			);
@@ -788,6 +825,7 @@
 				05AA11152869F25100AEC3C1 /* OtherCharacterCellView.swift in Sources */,
 				05AA110C2869E2B600AEC3C1 /* LocationDetailViewModel.swift in Sources */,
 				05068F7F2863351A00CB74F8 /* LocationRemoteDataSource.swift in Sources */,
+				050673FB288E901500E3761B /* EpisodeDetailViewModel.swift in Sources */,
 				05673777285B752F006B6CBD /* Episode.swift in Sources */,
 				05AA11052869D22A00AEC3C1 /* LocationDetailView.swift in Sources */,
 				05AA110F2869E4B000AEC3C1 /* LocationDetSubView.swift in Sources */,
@@ -827,10 +865,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050673FD288E96B900E3761B /* EpisodeRemoteDataSourceUnitTest.swift in Sources */,
 				05E8E8BC2861F02800CFC3FA /* URLProtocolMock.swift in Sources */,
+				05067400288E985000E3761B /* MockLocationRepository.swift in Sources */,
 				05E8E8B62861E88600CFC3FA /* CharRepoUnitTest.swift in Sources */,
+				05067404288E98D900E3761B /* LocationRepositoryImplementationUnitTest.swift in Sources */,
 				05E8E8BA2861E8CB00CFC3FA /* CharRemoteDataSourceTest.swift in Sources */,
+				050673F9288E826100E3761B /* EpisodesRepositoryImplementationUnitTest.swift in Sources */,
 				05E8E8B82861E89C00CFC3FA /* MockCharRepo.swift in Sources */,
+				050673F7288E810000E3761B /* MockEpisodeRepository.swift in Sources */,
+				05067402288E98B000E3761B /* LocationRemoteDataSourceUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

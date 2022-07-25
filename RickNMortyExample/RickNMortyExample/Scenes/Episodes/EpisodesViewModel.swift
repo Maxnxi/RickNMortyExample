@@ -4,7 +4,7 @@
 //
 //  Created by Maksim Ponomarev on 28/06/2022.
 //
-
+import SwiftUI
 import Foundation
 import Combine
 
@@ -15,11 +15,12 @@ class EpisodesViewModel: ObservableObject {
     var currentPage = 1
     private var cancellable: AnyCancellable?
     
-    func getEpisodes(page:Int) {
+    func getEpisodes(page: Int) {
         showProgressView = true
         cancellable = GetEpisodesUseCase().execute(page: page)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
+                self.showProgressView = false
                 switch completion {
                 case .finished:
                     self.currentPage += 1
