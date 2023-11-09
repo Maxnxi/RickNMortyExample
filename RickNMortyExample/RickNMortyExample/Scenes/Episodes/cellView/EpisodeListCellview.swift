@@ -22,6 +22,7 @@ struct EpisodeListCellview: View {
              }
              .font(.footnote)
              .foregroundColor(Color.gray)
+             .background(Color.blue)
              Spacer()
          }
          
