@@ -1,0 +1,9 @@
+language: swift # or objective-c
+osx_image: xcode14.2
+script:
+  - xcodebuild -scheme RickNMortyExample -workspace 
+RickNMortyExample.xcworkspace 
+-sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 
+6S,OS=16.2' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
