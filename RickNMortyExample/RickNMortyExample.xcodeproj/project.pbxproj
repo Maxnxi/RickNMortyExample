@@ -20,7 +20,6 @@
 		05068F8128633C6900CB74F8 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05068F8028633C6900CB74F8 /* LocationRepository.swift */; };
 		05068F8328633C8700CB74F8 /* LocationRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05068F8228633C8700CB74F8 /* LocationRepoImpl.swift */; };
 		05673731285B5584006B6CBD /* RickNMortyExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05673730285B5584006B6CBD /* RickNMortyExampleApp.swift */; };
-		05673733285B5584006B6CBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05673732285B5584006B6CBD /* ContentView.swift */; };
 		05673735285B5587006B6CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05673734285B5587006B6CBD /* Assets.xcassets */; };
 		05673738285B5587006B6CBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05673737285B5587006B6CBD /* Preview Assets.xcassets */; };
 		0567373A285B5587006B6CBD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05673739285B5587006B6CBD /* Persistence.swift */; };
@@ -121,7 +120,6 @@
 		05068F8228633C8700CB74F8 /* LocationRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepoImpl.swift; sourceTree = "<group>"; };
 		0567372D285B5584006B6CBD /* RickNMortyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickNMortyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05673730285B5584006B6CBD /* RickNMortyExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickNMortyExampleApp.swift; sourceTree = "<group>"; };
-		05673732285B5584006B6CBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05673734285B5587006B6CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05673737285B5587006B6CBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05673739285B5587006B6CBD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -326,7 +324,6 @@
 				0567377F285B832A006B6CBD /* Locations */,
 				0567377C285B8275006B6CBD /* Characters */,
 				05673763285B56C5006B6CBD /* CustomTab */,
-				05673732285B5584006B6CBD /* ContentView.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -820,7 +817,6 @@
 				05673784285B834E006B6CBD /* LocationsView.swift in Sources */,
 				05C94EE52860713000DC5167 /* ServerLocationResponse.swift in Sources */,
 				05673782285B8343006B6CBD /* Episodes.swift in Sources */,
-				05673733285B5584006B6CBD /* ContentView.swift in Sources */,
 				0567377B285B7544006B6CBD /* Location.swift in Sources */,
 				05AA11152869F25100AEC3C1 /* OtherCharacterCellView.swift in Sources */,
 				05AA110C2869E2B600AEC3C1 /* LocationDetailViewModel.swift in Sources */,

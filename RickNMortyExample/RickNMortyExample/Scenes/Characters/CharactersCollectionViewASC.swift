@@ -36,7 +36,7 @@ struct CharactersCollectionViewASC: View {
             .onAppear() {
                 print("On appear 1 works")
                 if viewModel.characters.isEmpty {
-                    viewModel.getAllCharacters(page: 1) // 1
+                    viewModel.getAllCharacters(page: 1)
                 }
             }
            

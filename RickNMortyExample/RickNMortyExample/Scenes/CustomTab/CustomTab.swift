@@ -23,15 +23,10 @@ struct CustomTab: View {
                 Episodes(viewModel: EpisodesViewModel())
             case 3:
                 CharactersCollectionViewASC(viewModel: CharactersCollectionViewModel())
-                
-                //CharactersCollection()
             case 4:
-                //Text("case 4")
-                //CharactersCollection()
                 ARScene()
             default:
                 CharactersCollectionView(viewModel: CharactersCollectionViewModel())
-                //CharactersCollection()
             }
             
             
